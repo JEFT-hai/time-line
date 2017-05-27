@@ -1,0 +1,181 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body,html{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 62.5%;
+	
+}
+
+li{
+	list-style: none;
+}
+
+.header{
+	width: 100%;
+}
+
+.header h1{
+	font-size: 3rem;
+	margin-left: 10%;
+	font-weight: weight;
+	color: #47a3ff;
+	padding: 2rem 3rem ;
+}
+
+.main{
+	width: 80%;
+	margin: 5rem auto;
+}
+
+.timeline{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.timeline:before{
+	position: absolute;
+	content: "";
+	width: 10px;
+	background-color: #afdcf8;
+	height: 100%;
+	left: 20%;
+	margin-left: -10px;
+}
+
+.timeline li{
+	position: relative;
+}
+
+.timeline li+li{
+	margin-top: 2rem;
+}
+
+.timeline .time{
+	position: absolute;
+	box-sizing: border-box;
+	width: 25%;
+	padding-right: 100px;
+	text-align: right;
+	margin: 0;
+
+}
+
+.timeline .time span{
+	display: block;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	color: #ccc;
+	font-weight: 800;
+}
+
+.timeline .time .hour{
+	font-size: 4rem;
+	line-height: 4.5rem;
+	color: #47a3ff;
+}
+
+.timeline .content{
+	box-sizing: border-box;
+	margin: 0 0 0 25%;
+	background-color: #47a3ff;
+	color: #fff;
+	padding: 3rem;
+	border-radius: 5px;
+	position: relative;
+}
+
+.content:after{
+	content: "";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	border: 10px solid transparent;
+	border-right-color: #47a3ff;
+	top:15px;
+	left: -20px;
+}
+
+.timeline ul>li:nth-child(2n-1) .content:after {
+    border-right-color: #6cbfee;
+}
+.timeline ul>li:nth-child(2n-1) .content {
+    background-color: #6cbfee;
+}
+
+.timeline .content h3{
+	margin: 0;
+	font-size: 3rem;
+	padding: 1rem;
+	border-bottom: 1px solid #fff;
+}
+
+.timeline .content p{
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+
+@media only screen and (max-width: 55em){
+	.header h1{
+		text-align: center;
+	}
+
+	.main{
+		width: 90%;
+	}
+
+	.timeline .time .hour{
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+
+	.timeline .time{
+		padding-right: 80px;
+	}
+}
+
+@media only screen and (max-width: 40em){
+	html{
+		font-size: 55%;
+	}
+
+	.main{
+		width: 85%;
+		margin-top: 0;
+	}
+
+	.timeline:before{
+		display: none;
+	}
+
+	.timeline .time{
+		width: 100%;
+		position: relative;
+		text-align: left;
+	}
+
+	.timeline .content{
+		width: 100%;
+		margin: 1.5rem auto 0;
+	}
+
+	.content:after{
+		border-right-color: transparent;
+		border-bottom-color: #47a3ff;
+		top:-20px;
+		left: 15px;
+	}
+
+	.timeline ul>li:nth-child(2n-1) .content:after {
+		border-right-color: transparent;
+	    border-bottom-color: #6cbfee;
+	}
+}
